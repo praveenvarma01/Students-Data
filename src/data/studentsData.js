@@ -1,0 +1,6 @@
+const studentsData = [
+  { id: 1, name: "Rahul Sharma", email: "rahul@gmail.com", age: 21 },
+  { id: 2, name: "Priya Singh", email: "priya@gmail.com", age: 22 }
+];
+
+export default studentsData;
