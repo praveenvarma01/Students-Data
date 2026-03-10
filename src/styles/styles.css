@@ -1,40 +1,64 @@
-body{
-font-family: Arial;
-background:#f5f7fb;
+/* Global Reset */
+*{
+box-sizing: border-box;
+margin:0;
+padding:0;
 }
 
-.container{
-width:800px;
-margin:auto;
+body{
+font-family: Arial, sans-serif;
+background:#9ba289;
 padding:20px;
 }
 
-.title{
-text-align:center;
-margin-bottom:20px;
+/* Container */
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+background:white;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Title */
+.title{
+text-align:center;
+margin-bottom:25px;
+font-size:28px;
+}
+
+/* Form */
 .form{
 display:flex;
+flex-wrap:wrap;
 gap:10px;
 margin-bottom:20px;
 }
 
 .form input{
-padding:8px;
+flex:1;
+min-width:150px;
+padding:10px;
 border:1px solid #ccc;
-border-radius:5px;
+border-radius:6px;
 }
 
 .form button{
 background:#4CAF50;
 color:white;
 border:none;
-padding:10px;
-border-radius:5px;
+padding:10px 16px;
+border-radius:6px;
 cursor:pointer;
+transition:0.3s;
 }
 
+.form button:hover{
+background:#43a047;
+}
+
+/* Table */
 .table{
 width:100%;
 border-collapse:collapse;
@@ -43,35 +67,99 @@ background:white;
 
 .table th,
 .table td{
-padding:10px;
+padding:12px;
 border:1px solid #ddd;
 text-align:center;
 }
 
+.table th{
+background:#f0f0f0;
+}
+
+/* Buttons */
 .editBtn{
 background:#2196F3;
 color:white;
 border:none;
-padding:6px 10px;
+padding:6px 12px;
 margin-right:5px;
+border-radius:5px;
+cursor:pointer;
 }
 
 .deleteBtn{
 background:#f44336;
 color:white;
 border:none;
-padding:6px 10px;
+padding:6px 12px;
+border-radius:5px;
+cursor:pointer;
 }
 
 .excelBtn{
 margin-bottom:15px;
-padding:10px;
+padding:10px 16px;
 background:#673ab7;
 color:white;
 border:none;
-border-radius:5px;
+border-radius:6px;
+cursor:pointer;
 }
 
+/* Loading */
 .loading{
 text-align:center;
+padding:20px;
+font-size:18px;
+}
+
+/* Make table scrollable on small screens */
+.table-wrapper{
+overflow-x:auto;
+}
+
+/* Tablet Responsive */
+@media (max-width:768px){
+
+.title{
+font-size:24px;
+}
+
+.form{
+flex-direction:column;
+}
+
+.form input{
+width:100%;
+}
+
+.form button{
+width:100%;
+}
+
+}
+
+/* Mobile Responsive */
+@media (max-width:480px){
+
+.container{
+padding:15px;
+}
+
+.title{
+font-size:20px;
+}
+
+.table th,
+.table td{
+padding:8px;
+font-size:14px;
+}
+
+.editBtn,
+.deleteBtn{
+padding:5px 8px;
+font-size:12px;
+}
+
 }

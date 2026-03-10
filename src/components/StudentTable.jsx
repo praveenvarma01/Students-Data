@@ -3,6 +3,7 @@ import React from "react";
 function StudentTable({ students, deleteStudent, setEditStudent }) {
 
   return (
+    <div className="table-wrapper">
     <table className="table">
 
       <thead>
@@ -47,6 +48,7 @@ function StudentTable({ students, deleteStudent, setEditStudent }) {
       </tbody>
 
     </table>
+   </div>
   );
 }
 
