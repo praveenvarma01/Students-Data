@@ -63,6 +63,7 @@ background:#43a047;
 width:100%;
 border-collapse:collapse;
 background:white;
+min-width: 600px;
 }
 
 .table th,
